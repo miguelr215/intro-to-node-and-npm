@@ -24,8 +24,16 @@
 
 // PART 3
 const fs = require("fs");
+const chalk = require("chalk-animation");
 
 const contents = fs.readdirSync("./animals");
 
 console.log(contents);
+const animation = chalk.rainbow(
+    contents.join('\n')
+);
+
+// debugger;
+// animation.stop();
+setTimeout(() => animation.stop(), 1300);
 
