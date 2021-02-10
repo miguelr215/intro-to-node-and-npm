@@ -24,16 +24,21 @@
 
 // PART 3
 const fs = require("fs");
-const chalk = require("chalk-animation");
+// const chalk = require("chalk-animation");
+
+// named import
+const { animateString } = require("./animate-string");
 
 const contents = fs.readdirSync("./animals");
 
-console.log(contents);
-const animation = chalk.rainbow(
-    contents.join('\n')
-);
+animateString(contents.join('\n'));
+
+// console.log(contents);
+// const animation = chalk.rainbow(
+//     contents.join('\n')
+// );
 
 // debugger;
 // animation.stop();
-setTimeout(() => animation.stop(), 1300);
+// setTimeout(() => animation.stop(), 1300);
 
